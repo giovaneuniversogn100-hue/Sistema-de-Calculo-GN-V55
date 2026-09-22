@@ -31,11 +31,11 @@ jobs:
             "platforms;android-35" \
             "build-tools;35.0.0"
 
-      - name: Descompactar projeto Android
+      - name: Descompactar projeto Android V56
         run: |
           rm -rf android-project
           mkdir android-project
-          unzip -q Sistema_Calculo_GN_Android_V55_Seguro_Com_Icone_Corrigido.zip \
+          unzip -q Sistema_Calculo_GN_Android_V56_Corrigido.zip \
             -d android-project
 
       - name: Instalar Gradle
@@ -58,6 +58,6 @@ jobs:
       - name: Publicar APK
         uses: actions/upload-artifact@v4
         with:
-          name: Sistema-de-Calculo-GN-V55-Corrigido
+          name: Sistema-de-Calculo-GN-V56
           path: android-project/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
